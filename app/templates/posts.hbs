@@ -1,11 +1,12 @@
 <ul>
-  {{#each}}
+  {{#each post in model}}
     <li class="post">
-      {{title}}
-      <br />
-      ({{upvotes}}/{{downvotes}})
-      <br />
-      {{length}}
+      <div class="title">
+        <a {{bind-attr href=post.url title=post.title}} target="_blank">
+          {{post.title}}
+        </a>
+      </div>
+      {{#link-to 'posts.post' post}}View Comments{{/link-to}}
     </li>
   {{/each}}
 </ul>

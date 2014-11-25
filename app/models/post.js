@@ -21,7 +21,7 @@ Post.reopenClass({
     {
       id: 2,
       title: 'Transcare',
-      url: 'http://poeticsystems.com',
+      url: 'http://texastranscare.com',
       timestamp: '1395574195',
       upvotes: 12,
       downvotes: 8,
@@ -29,7 +29,7 @@ Post.reopenClass({
     {
       id: 3,
       title: 'HealthQuest EMS',
-      url: 'http://poeticsystems.com',
+      url: 'http://healthquestems.com',
       timestamp: '1376574195',
       upvotes: 5,
       downvotes: 9,
