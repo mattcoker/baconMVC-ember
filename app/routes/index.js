@@ -1,9 +1,9 @@
 import Ember from 'ember';
 
-var PostsRoute = Ember.Route.extend({
+var IndexRoute = Ember.Route.extend({
   model: function() {
     return this.store.find('post');
   }
 });
 
-export default PostsRoute;
+export default IndexRoute;

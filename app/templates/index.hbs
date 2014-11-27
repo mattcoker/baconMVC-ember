@@ -1,0 +1,19 @@
+<h2>Index Template</h2>
+<ul>
+  {{#each post in controller}}
+    <li>
+      <a {{bind-attr href=post.url title=post.title}} target="_blank">
+        {{post.title}}
+      </a>
+      <a {{bind-attr href=post.url title=post.title}} class="greyed-out" target="_blank">
+        {{post.url}}
+      </a>
+      <div>
+        {{#link-to 'post' post}}
+          Karma: {{post.netVotes}}
+        {{/link-to}}
+      </div>
+    </li>
+    <br />
+  {{/each}}
+</ul>

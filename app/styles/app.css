@@ -2,3 +2,19 @@
   background: #ddd;
   margin-bottom: 20px;
 }
+
+a {
+  color: #888;
+  text-decoration: none;
+}
+
+li:hover a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.greyed-out {
+  color: #aaa;
+  font-size: 12px;
+  text-decoration: none !important;
+}

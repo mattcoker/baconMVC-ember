@@ -4,8 +4,8 @@ var Post = DS.Model.extend({
   title: DS.attr('string'),
   url: DS.attr('string'),
   timestamp: DS.attr('date'),
-  upvotes: DS.attr('number'),
-  downvotes: DS.attr('number'),
+  upvotes: DS.attr('number', {default: 0}),
+  downvotes: DS.attr('number', {default: 0}),
 });
 
 Post.reopenClass({
