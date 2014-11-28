@@ -1,10 +1,21 @@
 .post {
   background: #ddd;
   margin-bottom: 20px;
+  padding: 20px;
+}
+
+.post:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h3,p {
+  margin: 0;
 }
 
 a {
-  color: #888;
+  color: black;
   text-decoration: none;
 }
 
@@ -14,7 +25,22 @@ li:hover a {
 }
 
 .greyed-out {
-  color: #aaa;
+  color: #777;
   font-size: 12px;
-  text-decoration: none !important;
+}
+
+.voting-block {
+  float: left;
+  text-align: center;
+}
+
+.voting-block > * {
+  display: block;
+}
+
+.upvote.active {
+  color: orangered;
+}
+.downvote.active {
+  color: #9494FF;
 }

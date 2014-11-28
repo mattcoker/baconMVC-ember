@@ -1,19 +1,15 @@
-<h2>Index Template</h2>
-<ul>
-  {{#each post in controller}}
-    <li>
+{{#each post in controller}}
+  <div class="post">
+    <div class="voting-block">
+      <button {{bind-attr class=":upvote post.upVoted:active"}} {{action 'addUpVote'}}>⬆</button>
+      <span class="netVotes">{{post.netVotes}}</span>
+      <button {{bind-attr class=":downvote post.downVoted:active"}} {{action 'addDownVote'}}>⬇</button>
+    </div>
+    <h3>
       <a {{bind-attr href=post.url title=post.title}} target="_blank">
         {{post.title}}
       </a>
-      <a {{bind-attr href=post.url title=post.title}} class="greyed-out" target="_blank">
-        {{post.url}}
-      </a>
-      <div>
-        {{#link-to 'post' post}}
-          Karma: {{post.netVotes}}
-        {{/link-to}}
-      </div>
-    </li>
-    <br />
-  {{/each}}
-</ul>
+    </h3>
+    <p>{{#link-to 'post' post}}View Comments{{/link-to}}</p>
+  </div>
+{{/each}}
